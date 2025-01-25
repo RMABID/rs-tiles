@@ -1,6 +1,7 @@
 import { IoMenu } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo/rs_logo-removebg-preview.png";
+import { IoIosArrowDown } from "react-icons/io";
 
 const Navbar = () => {
   return (
@@ -22,8 +23,31 @@ const Navbar = () => {
           <li>
             <NavLink to={"/products"}>Products</NavLink>
           </li>
-          <li>
-            <NavLink to={"/about"}>About Us</NavLink>
+          <li className="dropdown dropdown-bottom dropdown-center cursor-pointer">
+            <div
+              tabIndex={0}
+              role="button"
+              className={"flex items-center gap-x-2 "}
+            >
+              About Us{" "}
+              <span>
+                <IoIosArrowDown />
+              </span>{" "}
+            </div>
+            <ul
+              tabIndex={0}
+              className="dropdown-content cursor-pointer -ml-16 mt-6 menu bg-black text-white rounded-box z-1 w-52 mx-auto p-2 shadow-sm"
+            >
+              <li>
+                <Link>Company overview</Link>
+              </li>
+              <li>
+                <Link>Mission, Vision & Values</Link>
+              </li>
+              <li>
+                <Link to={"/our-team"}>Our Team</Link>
+              </li>
+            </ul>
           </li>
         </ul>
         <Link to={"/"} className="flex items-center lg:hidden cursor-pointer">
