@@ -10,7 +10,7 @@ const Banner = () => {
     >
       <div className="absolute inset-0 bg-[#05110456] flex justify-center items-center text-center">
         <div className="text-white p-6">
-          <h1 className="text-5xl font-medium uppercase mb-4">
+          <h1 className="text-5xl lg:text-8xl font-medium uppercase mb-4">
             Serving You Excellence
           </h1>
           <p className="text-lg">

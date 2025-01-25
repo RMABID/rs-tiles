@@ -4,11 +4,13 @@ import Product from "../../components/Home/Product";
 import Footer from "../../components/share/Footer";
 import Navbar from "../../components/share/Navbar";
 import Testimonial from "../../components/Home/Testimonial";
+import SideNavbar from "../../components/Home/SideNavbar";
 
 const Home = () => {
   return (
-    <div>
+    <div className="">
       <Navbar />
+      <SideNavbar></SideNavbar>
       <section>
         <Banner />
         <About />

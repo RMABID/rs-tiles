@@ -30,7 +30,7 @@ const Testimonial = () => {
         }}
         navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
-        className="mySwiper relative  h-96 w-full  my-14"
+        className="mySwiper relative  h-[450px] w-full  my-20"
       >
         <SwiperSlide className="absolute flex flex-col items-center justify-center  inset-0 text-white bg-[#00000081]  text-center">
           <div className="flex flex-col md:mt-40 md:w-8/12 lg:w-6/12 mt-42 mx-auto justify-center items-center">
