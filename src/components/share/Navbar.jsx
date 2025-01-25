@@ -12,7 +12,7 @@ const Navbar = () => {
             <img className=" w-16 " src={logo} />
             <h1 className="text-xl -ml-4 italic font-medium">RS Tiles</h1>
           </Link>
-          <h1 className="text-xl lg:hidden font-medium">
+          <h1 className="text-2xl lg:hidden font-medium">
             <IoMenu />
           </h1>
         </div>

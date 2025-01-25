@@ -1,9 +1,14 @@
-import React from 'react'
+import coming from "../../assets/image/Portfolio Update-amico.png";
 
 const AllProducts = () => {
   return (
-    <div>AllProducts</div>
-  )
-}
+    <div className="pt-32">
+      <h1 className="text-5xl text-red-500 text-center font-bold">
+        Coming Soon
+      </h1>
+      <img src={coming} alt="" />
+    </div>
+  );
+};
 
-export default AllProducts
+export default AllProducts;
