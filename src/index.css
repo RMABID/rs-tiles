@@ -3,14 +3,18 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+body {
+  background-color: #f7f7f7;
+}
+
 .Raleway {
   font-family: "Raleway", serif;
 }
 
- .active {
+.active {
   color: aqua;
 }
 
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }

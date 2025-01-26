@@ -1,12 +1,13 @@
 import commits_img from "../../assets/image/comits.jpg";
 import Title from "../../components/share/Title";
 import rana from "../../assets/team/Screenshot 2025-01-25 202112.png";
+import saidul from "../../assets/team/saidul.jpg";
 import Bappi from "../../assets/team/Bappi.jpg";
 import Abid from "../../assets/team/rm abid.jpg";
 const OurTeam = () => {
   const managementTeams = [
     { name: "Rana", image: rana },
-    { name: "Saidul Islam", image: rana },
+    { name: "Saidul Islam", image: saidul },
   ];
   const teams = [
     { name: "Bappi", image: Bappi },

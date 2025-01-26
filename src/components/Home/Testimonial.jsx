@@ -28,7 +28,7 @@ const Testimonial = () => {
           delay: 2500,
           disableOnInteraction: false,
         }}
-        navigation={true}
+        
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper relative  h-[450px] w-full  my-20"
       >
