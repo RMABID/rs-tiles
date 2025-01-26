@@ -8,7 +8,7 @@ const Product = () => {
   return (
     <section className="my-14 w-10/12 lg:w-8/12 mx-auto ">
       <Title text1={"Products"} />
-      <div className="grid my-12 lg:grid-cols-3 md:grid-cols-2 justify-center items-center gap-4">
+      <div className="grid my-12 lg:grid-cols-3 md:grid-cols-2 justify-center items-center md:gap-14 gap-4">
         <Link>
           <div
             style={{ backgroundImage: `url('${wall}')` }}

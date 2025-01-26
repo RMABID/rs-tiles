@@ -39,7 +39,7 @@ const Navbar = () => {
   return (
     <nav
       className={`${isVisible ? "translate-y-0" : "-translate-y-full"} ${
-        scrollPosition > 100 ? "bg-red-300" : "bg-[#B8BACD]"
+        scrollPosition > 100 ? "bg-red-300" : "bg-[#B8BACD]/50"
       } fixed w-full z-40 backdrop-blur-lg transition-transform duration-300   py-4 Raleway `}
     >
       <div className="relative container mx-auto px-4 md:px-0 flex items-center justify-between">

@@ -9,7 +9,7 @@ const SideNavbar = () => {
       <div className="flex flex-col gap-6 mt-62 text-white items-center">
         <Link
           to="https://www.facebook.com/profile.php?id=61558253872692"
-          className="text-2xl w-10 h-10 bg-black rounded-xl flex items-center justify-center  z-40"
+          className=" text-2xl w-10 h-10 bg-black rounded-xl flex items-center justify-center  z-40"
         >
           <FaFacebookF />
         </Link>
