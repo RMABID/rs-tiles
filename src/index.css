@@ -10,3 +10,7 @@
  .active {
   color: aqua;
 }
+
+::-webkit-scrollbar{
+  display: none;
+}
