@@ -4,7 +4,7 @@ import { GrLogout } from "react-icons/gr";
 import { RxCross1 } from "react-icons/rx";
 import { Link } from "react-router-dom";
 import Admin from "./Menu/Admin";
-
+import logo from "../../assets/logo/rs_logo-removebg-preview.png";
 const Sidebar = () => {
   const [isActive, setActive] = useState(false);
   const handleToggle = () => {
@@ -18,7 +18,7 @@ const Sidebar = () => {
         <div>
           <div className="block cursor-pointer p-4 font-bold">
             <Link to="/">
-              {/* <img className="w-14" src={logo} alt="logo" /> */}
+              <img className="w-14" src={logo} alt="logo" />
             </Link>
           </div>
         </div>
@@ -41,7 +41,7 @@ const Sidebar = () => {
             <Link to="/">
               <img
                 // className='hidden md:block'
-                // src={logo}
+                src={logo}
                 alt="logo"
                 width="100"
                 height="100"

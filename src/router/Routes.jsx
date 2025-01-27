@@ -6,6 +6,7 @@ import AboutUs from "../page/AboutUs/OurTeam";
 import OurTeam from "../page/AboutUs/OurTeam";
 import Dashboard from "../layout/Dashboard";
 import AddProduct from "../page/Dashboard/Admin/AddProduct";
+import AllProduct from "../page/Dashboard/Admin/AllProduct";
 
 const Routes = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const Routes = createBrowserRouter([
       {
         path: "add-product",
         element: <AddProduct />,
+      },
+      {
+        path: "all-product",
+        element: <AllProduct />,
       },
     ],
   },
