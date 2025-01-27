@@ -1,4 +1,5 @@
 import coming from "../../assets/image/Portfolio Update-amico.png";
+import ProductCard from "../../components/AllProducts/ProductCard";
 import SideBarFilter from "../../components/AllProducts/SideBarFilter";
 
 const AllProducts = () => {
@@ -9,7 +10,9 @@ const AllProducts = () => {
         <div className="col-span-3 border">
           <SideBarFilter />
         </div>
-        <div className="col-span-9 border h-screen">i'm coming</div>
+        <div className="col-span-9 border h-screen">
+          <ProductCard />
+        </div>
       </div>
     </div>
   );

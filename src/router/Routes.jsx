@@ -4,6 +4,8 @@ import Home from "../page/Home/Home";
 import AllProducts from "../page/Products/AllProducts";
 import AboutUs from "../page/AboutUs/OurTeam";
 import OurTeam from "../page/AboutUs/OurTeam";
+import Dashboard from "../layout/Dashboard";
+import AddProduct from "../page/Dashboard/Admin/AddProduct";
 
 const Routes = createBrowserRouter([
   {
@@ -22,6 +24,16 @@ const Routes = createBrowserRouter([
   {
     path: "/",
     element: <Home />,
+  },
+  {
+    path: "dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "add-product",
+        element: <AddProduct />,
+      },
+    ],
   },
 ]);
 

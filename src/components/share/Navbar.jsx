@@ -99,6 +99,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
+            <li>
+              <NavLink to={"/dashboard"}>Dashboard</NavLink>
+            </li>
           </ul>
         </div>
 
@@ -135,6 +138,9 @@ const Navbar = () => {
                 <Link to={"/our-team"}>Our Team</Link>
               </li>
             </ul>
+          </li>
+          <li>
+            <NavLink to={"/dashboard"}>Dashboard</NavLink>
           </li>
         </ul>
 
