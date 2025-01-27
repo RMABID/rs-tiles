@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/Dashboard/Sidebar";
+import QuantityUpdateModal from "../components/Dashboard/Modal/QuantityUpdateModal";
 
 const Dashboard = () => {
   return (
@@ -8,6 +9,7 @@ const Dashboard = () => {
       <div className="flex-1 md:ml-64">
         <Outlet />
       </div>
+      {/* modal call */}
     </section>
   );
 };

@@ -7,6 +7,7 @@ import OurTeam from "../page/AboutUs/OurTeam";
 import Dashboard from "../layout/Dashboard";
 import AddProduct from "../page/Dashboard/Admin/AddProduct";
 import AllProduct from "../page/Dashboard/Admin/AllProduct";
+import ProductUpdated from "../components/Dashboard/Updated/ProductUpdated";
 
 const Routes = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const Routes = createBrowserRouter([
       {
         path: "all-product",
         element: <AllProduct />,
+      },
+      {
+        path: "all-product/:id",
+        element: <ProductUpdated />,
       },
     ],
   },
