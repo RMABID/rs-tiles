@@ -10,7 +10,7 @@ const Sidebar = () => {
   const handleToggle = () => {
     setActive(!isActive);
   };
-  console.log(isActive);
+
   return (
     <section>
       {/* Small Screen Navbar */}
