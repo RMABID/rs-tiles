@@ -10,7 +10,7 @@ const Navbar = ({ handleToggle, isActive }) => {
   const { user } = useAuth();
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isVisible, setIsVisible] = useState(true);
-  console.log(user);
+
   useEffect(() => {
     const handleScroll = () => {
       const currentScrollState = window.scrollY;
@@ -86,7 +86,10 @@ const Navbar = ({ handleToggle, isActive }) => {
 
           <div className="flex items-center gap-x-2 cursor-pointer">
             {user && user?.email ? (
-              <img className="w-10 rounded-full object-cover border border-purple-100 h-10" src={user?.photoURL} />
+              <img
+                className="w-10 rounded-full object-cover border border-purple-100 h-10"
+                src={user?.photoURL}
+              />
             ) : (
               <Link
                 to={"/login"}

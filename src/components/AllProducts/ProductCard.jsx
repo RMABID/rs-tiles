@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({ item }) => {
   const { product_image, product_name, _id } = item;
-  console.log(item);
   return (
     <Link to={`/all-products/${_id}`}>
       <div className="shadow rounded-xl hover:scale-105 cursor-pointer duration-500 transition-all border border-white bg-white">

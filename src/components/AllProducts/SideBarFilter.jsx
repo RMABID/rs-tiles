@@ -1,20 +1,6 @@
-import { useState } from "react";
 
-const SideBarFilter = () => {
-  const [filter, setFilter] = useState([]);
 
-  const handleFilter = (e) => {
-    setFilter((prev) => {
-      if (prev.includes(e.target.value)) {
-        return prev.filter((item) => item !== e.target.value);
-      } else {
-        return [...prev, e.target.value];
-      }
-    });
-  };
-
-  console.log(filter);
-
+const SideBarFilter = ({ handleFilter }) => {
   return (
     <div className="pl-4  flex flex-col items-center gap-y-8 p-2">
       <h1 className="text-3xl font-medium  ">Filter result</h1>

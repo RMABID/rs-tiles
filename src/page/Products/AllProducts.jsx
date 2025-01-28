@@ -5,26 +5,36 @@ import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useState } from "react";
 
 const AllProducts = () => {
-  const [searchValue, setSearchValue] = useState("");
   const axiosPublic = useAxiosPublic();
+  const [searchValue, setSearchValue] = useState("");
+  const [filter, setFilter] = useState([]);
   const { data: products = [], refetch } = useQuery({
-    queryKey: ["all-products"],
+    queryKey: ["all-products", searchValue, filter],
     queryFn: async () => {
-      const { data } = await axiosPublic("/all-products");
+      const { data } = await axiosPublic(
+        `/all-products?search=${searchValue}&filter=${filter}`
+      );
       return data;
     },
   });
 
-  const handleSearch = async () => {
-    console.log(searchValue);
+  const handleFilter = (e) => {
+    setFilter((prev) => {
+      if (prev.includes(e.target.value)) {
+        return prev.filter((item) => item !== e.target.value);
+      } else {
+        return [...prev, e.target.value];
+      }
+    });
   };
 
+  console.log(filter);
   return (
     <div className="pt-32 lg:px-12 md:px-8 px-4">
       <div className="grid grid-cols-12  gap-x-3">
         {/* Side Filter */}
         <div className="col-span-3">
-          <SideBarFilter />
+          <SideBarFilter handleFilter={handleFilter} />
         </div>
         <div className="col-span-9  h-screen">
           <div className="flex items-center md:justify-between justify-center ">
@@ -49,11 +59,7 @@ const AllProducts = () => {
               </div>
 
               <div className="indicator">
-                <button
-                  type="submit"
-                  onClick={handleSearch}
-                  className="btn py-6 join-item"
-                >
+                <button type="submit" className="btn py-6 join-item">
                   Search
                 </button>
               </div>

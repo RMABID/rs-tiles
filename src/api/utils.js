@@ -21,5 +21,5 @@ export const saveUser = async (user) => {
     email: user?.email,
   };
 
-  await axios.post("http://localhost:5000/rs-users", userInfo);
+  await axios.post("https://rs-riles-server.vercel.app/rs-users", userInfo);
 };
