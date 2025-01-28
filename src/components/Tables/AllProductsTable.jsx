@@ -28,12 +28,12 @@ const AllProductsTable = ({ item, refetch }) => {
   return (
     <tr className="">
       <td>
-        <img className="w-10 h-12 rounded-full" src={product_image} alt="" />
+        <img className="w-16 h-12 " src={product_image} alt="" />
       </td>
       <td>{product_name}</td>
       <td>{category}</td>
       <td>{size}</td>
-      <td>{total_box}</td>
+      <td>{total_box.toFixed(4)}</td>
       <td>{quantity.toFixed(3)}</td>
       <th>
         <div className="flex items-center justify-center">

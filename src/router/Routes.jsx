@@ -11,14 +11,19 @@ import ProductUpdated from "../components/Dashboard/Updated/ProductUpdated";
 import RsLoan from "../page/Dashboard/Admin/RsLoan/RsLoan";
 import Login from "../page/Auth/Login";
 import Register from "../page/Auth/Register";
+import ProductDetails from "../page/Products/ProductDetails";
 
 const Routes = createBrowserRouter([
   {
     element: <MainLayout />,
     children: [
       {
-        path: "products",
+        path: "all-products",
         element: <AllProducts />,
+      },
+      {
+        path: "all-products/:id",
+        element: <ProductDetails />,
       },
       {
         path: "our-team",

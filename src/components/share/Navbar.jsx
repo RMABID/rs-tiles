@@ -51,7 +51,7 @@ const Navbar = ({ handleToggle, isActive }) => {
               <NavLink to={"/"}>Home</NavLink>
             </li>
             <li>
-              <NavLink to={"/products"}>Products</NavLink>
+              <NavLink to={"/all-products"}>Products</NavLink>
             </li>
             <li className="dropdown dropdown-bottom dropdown-center cursor-pointer">
               <div

@@ -18,7 +18,7 @@ const SideBarFilter = () => {
   return (
     <div className="pl-4  flex flex-col items-center gap-y-8 p-2">
       <h1 className="text-3xl font-medium  ">Filter result</h1>
-      <div className="p-6 shadow rounded-md bg-[#FFFFFF]">
+      <div className="p-8  shadow rounded-md bg-[#FFFFFF]">
         <h3 className="text-2xl font-medium my-4">Category</h3>
         <div className="flex flex-col items-start pt-2 gap-y-4">
           <div className="flex items-center gap-x-3 lg:gap-x-6">
@@ -61,7 +61,7 @@ const SideBarFilter = () => {
           </div>
         </div>
       </div>
-      <div className="p-6 shadow rounded-md bg-[#FFFFFF]">
+      <div className="p-8 px-12 shadow rounded-md bg-[#FFFFFF]">
         <h3 className="text-2xl font-medium my-4">Type</h3>
         <div className="flex flex-col items-start pt-2 gap-y-4">
           <div className="flex items-center gap-x-3 lg:gap-x-6">

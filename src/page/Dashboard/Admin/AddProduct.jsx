@@ -1,8 +1,13 @@
 import axios from "axios";
 import imageUpload from "../../../api/utils";
 import ProductFrom from "../../../components/Dashboard/From/ProductFrom";
+import useAuth from "../../../hooks/useAuth";
+import { useNavigate } from "react-router-dom";
+import toast from "react-hot-toast";
 
 const AddProduct = () => {
+  const { user } = useAuth();
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     const from = event.target;
@@ -23,6 +28,11 @@ const AddProduct = () => {
       size,
       box: parseInt(box),
       pes: parseInt(pes),
+      owner_info: {
+        name: user?.displayName,
+        email: user?.email,
+        image: user?.photoURL,
+      },
     };
     console.log(addProduct);
     try {
@@ -30,6 +40,8 @@ const AddProduct = () => {
         "http://localhost:5000/tails-products",
         addProduct
       );
+      toast.success("Product SuccessFully Added");
+      navigate("/dashboard/all-product");
       console.log(data);
     } catch (error) {
       console.log(error);
@@ -37,7 +49,7 @@ const AddProduct = () => {
   };
   return (
     <div>
-      <ProductFrom handleSubmit={handleSubmit} />
+      <ProductFrom user={user} handleSubmit={handleSubmit} />
     </div>
   );
 };

@@ -1,4 +1,4 @@
-const ProductFrom = ({ handleSubmit }) => {
+const ProductFrom = ({ handleSubmit, user }) => {
   //react input tag
 
   return (
@@ -80,7 +80,7 @@ const ProductFrom = ({ handleSubmit }) => {
             required
             type="text"
             name="owner_name"
-            // defaultValue={user?.displayName}
+            defaultValue={user?.displayName}
             readOnly
             placeholder="Enter "
             className="input input-bordered w-full"
@@ -93,7 +93,7 @@ const ProductFrom = ({ handleSubmit }) => {
           <input
             required
             type="email"
-            // defaultValue={user?.email}
+            defaultValue={user?.email}
             readOnly
             name="owner_email"
             placeholder="Enter Your Email"

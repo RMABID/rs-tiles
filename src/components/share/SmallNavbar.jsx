@@ -37,7 +37,7 @@ const SmallNavbar = ({ isActive }) => {
                     className={
                       "hover:px-18 hover:py-2  transition-all duration-700 ease-in-out"
                     }
-                    to={"/products"}
+                    to={"/all-products"}
                   >
                     Products
                   </NavLink>
