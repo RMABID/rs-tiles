@@ -7,7 +7,7 @@ const SmallNavbar = ({ isActive }) => {
   return (
     <div>
       <div
-        className={`z-50 lg:hidden fixed flex flex-col justify-between overflow-hidden bg-blue-100 w-72 shadow space-y-6 px-2 py-4  inset-y-0 left-0 transform ${
+        className={`z-50 lg:hidden fixed flex flex-col justify-between overflow-hidden bg-[#222b81b9]  w-72 shadow space-y-6 px-2 py-4  inset-y-0 left-0 transform ${
           isActive && "-translate-x-full"
         } lg:translate-x-0 transition duration-500 ease-in-out`}
       >
@@ -19,18 +19,34 @@ const SmallNavbar = ({ isActive }) => {
           </div>
           <div className="flex flex-col justify-between flex-1 mt-6">
             <nav>
-              <ul className="flex flex-col items-start px-6  text-lg   gap-4">
-                <li>
-                  <NavLink to={"/"}>Home</NavLink>
+              <ul className="flex flex-col text-white items-start px-6  text-lg   gap-4">
+                <li className="hover:bg-lime-200   hover:text-gray-700 w-full p-2 pl-5">
+                  <NavLink
+                    className={
+                      "hover:px-18 hover:py-2  transition-all duration-700 ease-in-out"
+                    }
+                    to={"/"}
+                  >
+                    Home
+                  </NavLink>
                 </li>
-                <li>
-                  <NavLink to={"/products"}>Products</NavLink>
+                <li className="hover:bg-lime-200   hover:text-gray-700 w-full p-2 pl-5">
+                  <NavLink
+                    className={
+                      "hover:px-18 hover:py-2  transition-all duration-700 ease-in-out"
+                    }
+                    to={"/products"}
+                  >
+                    Products
+                  </NavLink>
                 </li>
-                <li className="dropdown dropdown-bottom dropdown-center cursor-pointer">
+                <li className="dropdown dropdown-bottom dropdown-center cursor-pointer hover:bg-lime-200   hover:text-gray-700 w-full p-2 pl-5">
                   <div
                     tabIndex={0}
                     role="button"
-                    className={"flex items-center gap-x-2 "}
+                    className={
+                      "flex items-center gap-x-2 hover:px-10  transition-all duration-700 ease-in-out "
+                    }
                   >
                     About Us{" "}
                     <span>
@@ -39,7 +55,7 @@ const SmallNavbar = ({ isActive }) => {
                   </div>
                   <ul
                     tabIndex={0}
-                    className="dropdown-content cursor-pointer -ml-16 mt-6 menu bg-black text-white rounded-box z-1 w-52 mx-auto p-2 shadow-sm"
+                    className="dropdown-content cursor-pointer -mr-20  menu bg-black text-white rounded-box z-1 w-52 mx-auto p-2 shadow-sm"
                   >
                     <li>
                       <Link>Company overview</Link>
@@ -52,8 +68,15 @@ const SmallNavbar = ({ isActive }) => {
                     </li>
                   </ul>
                 </li>
-                <li>
-                  <NavLink to={"/dashboard"}>Dashboard</NavLink>
+                <li className="hover:bg-lime-200  cursor-pointer hover:text-gray-700 p-2">
+                  <NavLink
+                    className={
+                      "hover:px-18 hover:py-2  transition-all duration-700 ease-in-out"
+                    }
+                    to={"/dashboard"}
+                  >
+                    Dashboard
+                  </NavLink>
                 </li>
               </ul>
             </nav>
