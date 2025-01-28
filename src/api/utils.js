@@ -12,3 +12,14 @@ const imageUpload = async (imageData) => {
 };
 
 export default imageUpload;
+
+export const saveUser = async (user) => {
+  console.log(user);
+  const userInfo = {
+    name: user?.displayName,
+    image: user?.photoURL,
+    email: user?.email,
+  };
+
+  await axios.post("http://localhost:5000/rs-users", userInfo);
+};

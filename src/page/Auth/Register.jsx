@@ -5,7 +5,7 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import signup_img from "../../assets/image/Sign up-rafiki-D7e8Kr1j.png";
 import bg from "../../assets/image/product card.jpg";
 import useAuth from "../../hooks/useAuth";
-import imageUpload from "../../api/utils";
+import imageUpload, { saveUser } from "../../api/utils";
 import toast from "react-hot-toast";
 
 const Register = () => {
@@ -26,7 +26,7 @@ const Register = () => {
     try {
       const result = await createUser(email, password);
       await updateUserProfile(name, photoURL);
-      // await saveUser({ ...result?.user, displayName: name, photoURL });
+      await saveUser({ ...result?.user, displayName: name, photoURL });
       toast.success("SuccessFully Login");
       navigate(from, { replace: true });
     } catch (error) {
@@ -37,7 +37,7 @@ const Register = () => {
   const handleGoogleLogin = async () => {
     try {
       const data = await googleLogin();
-      // await saveUser(data?.user);
+      await saveUser(data?.user);
       toast.success("SuccessFully Login");
       navigate(from, { replace: true });
     } catch (error) {

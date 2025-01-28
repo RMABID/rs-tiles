@@ -6,6 +6,7 @@ import bg from "../../assets/image/banner.jpg";
 import login_img from "../../assets/image/Sign up-rafiki-D7e8Kr1j.png";
 import useAuth from "../../hooks/useAuth";
 import toast from "react-hot-toast";
+import { saveUser } from "../../api/utils";
 
 const Login = ({ loading }) => {
   const { loginUser, googleLogin } = useAuth();
@@ -35,7 +36,7 @@ const Login = ({ loading }) => {
   const handleGoogleLogin = async () => {
     try {
       const data = await googleLogin();
-      // await saveUser(data?.user);
+      await saveUser(data?.user);
       toast.success("SuccessFully Login");
       navigate(from, { replace: true });
     } catch (error) {
