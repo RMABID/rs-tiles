@@ -8,6 +8,9 @@ import Dashboard from "../layout/Dashboard";
 import AddProduct from "../page/Dashboard/Admin/AddProduct";
 import AllProduct from "../page/Dashboard/Admin/AllProduct";
 import ProductUpdated from "../components/Dashboard/Updated/ProductUpdated";
+import RsLoan from "../page/Dashboard/Admin/RsLoan/RsLoan";
+import Login from "../page/Auth/Login";
+import Register from "../page/Auth/Register";
 
 const Routes = createBrowserRouter([
   {
@@ -43,7 +46,19 @@ const Routes = createBrowserRouter([
         path: "all-product/:id",
         element: <ProductUpdated />,
       },
+      {
+        path: "rs-loan",
+        element: <RsLoan />,
+      },
     ],
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/register",
+    element: <Register />,
   },
 ]);
 

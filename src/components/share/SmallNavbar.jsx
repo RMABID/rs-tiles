@@ -2,8 +2,10 @@ import { GrLogout } from "react-icons/gr";
 import { Link, NavLink } from "react-router-dom";
 import logo from "../../assets/logo/rs_logo-removebg-preview.png";
 import { IoIosArrowDown } from "react-icons/io";
+import useAuth from "../../hooks/useAuth";
 
 const SmallNavbar = ({ isActive }) => {
+  const { logOut } = useAuth();
   return (
     <div>
       <div
@@ -68,7 +70,7 @@ const SmallNavbar = ({ isActive }) => {
                     </li>
                   </ul>
                 </li>
-                <li className="hover:bg-lime-200  cursor-pointer hover:text-gray-700 p-2">
+                <li className="hover:bg-lime-200  cursor-pointer hover:text-gray-700 p-2 pl-5">
                   <NavLink
                     className={
                       "hover:px-18 hover:py-2  transition-all duration-700 ease-in-out"
@@ -85,7 +87,10 @@ const SmallNavbar = ({ isActive }) => {
         <div>
           <hr />
 
-          <button className="flex w-full items-center px-4 py-2 mt-5 text-white hover:bg-lime-300  bg-blue-500 rounded-full hover:text-gray-700 transition-colors duration-300 transform">
+          <button
+            onClick={logOut}
+            className="flex w-full items-center px-4 py-2 mt-5 text-white hover:bg-lime-300  bg-blue-500 rounded-full hover:text-gray-700 transition-colors duration-300 transform"
+          >
             <GrLogout className="w-5 h-5" />
 
             <span className="mx-4 font-medium">Logout</span>
