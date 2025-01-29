@@ -12,6 +12,7 @@ import RsLoan from "../page/Dashboard/Admin/RsLoan/RsLoan";
 import Login from "../page/Auth/Login";
 import Register from "../page/Auth/Register";
 import ProductDetails from "../page/Products/ProductDetails";
+import ProductCard from "../components/AllProducts/ProductCard";
 
 const Routes = createBrowserRouter([
   {
@@ -20,6 +21,12 @@ const Routes = createBrowserRouter([
       {
         path: "all-products",
         element: <AllProducts />,
+        children: [
+          {
+            path: "all-products",
+            element: <ProductCard />,
+          },
+        ],
       },
       {
         path: "all-products/:id",

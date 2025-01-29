@@ -4,9 +4,11 @@ import ProductFrom from "../../../components/Dashboard/From/ProductFrom";
 import useAuth from "../../../hooks/useAuth";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
+import useAxiosSecure from "../../../hooks/useAxiosSecure";
 
 const AddProduct = () => {
   const { user } = useAuth();
+  const axiosSecure = useAxiosSecure();
   const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -34,12 +36,9 @@ const AddProduct = () => {
         image: user?.photoURL,
       },
     };
-    console.log(addProduct);
+
     try {
-      const { data } = await axios.post(
-        "http://localhost:5000/tails-products",
-        addProduct
-      );
+      const { data } = await axiosSecure.post("/tails-products", addProduct);
       toast.success("Product SuccessFully Added");
       navigate("/dashboard/all-product");
       console.log(data);

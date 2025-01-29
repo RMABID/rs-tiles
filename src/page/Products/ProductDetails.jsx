@@ -1,11 +1,12 @@
 import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
+import LoadingSpinner from "../../components/share/LoadingSpinner";
 
 const ProductDetails = () => {
   const axiosPublic = useAxiosPublic();
   const { id } = useParams();
-  const { data: product = {} } = useQuery({
+  const { data: product = {}, isLoading } = useQuery({
     queryKey: ["product", id],
     queryFn: async () => {
       const { data } = await axiosPublic(`/product/${id}`);
@@ -15,7 +16,7 @@ const ProductDetails = () => {
 
   const { product_image, category, type, size, quantity, total_box } = product;
 
-  console.log(product);
+ if(isLoading)return <LoadingSpinner/>
 
   return (
     <>

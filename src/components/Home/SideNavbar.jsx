@@ -13,6 +13,7 @@ const SideNavbar = () => {
         >
           <FaFacebookF />
         </Link>
+
         <Link className="text-2xl w-10 h-10 bg-black rounded-xl flex items-center justify-center  z-40">
           <BsTwitter />
         </Link>
