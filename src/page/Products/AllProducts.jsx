@@ -4,21 +4,21 @@ import SideBarFilter from "../../components/AllProducts/SideBarFilter";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useState } from "react";
 import LoadingSpinner from "../../components/share/LoadingSpinner";
-import { Outlet } from "react-router-dom";
 
 const AllProducts = () => {
   const axiosPublic = useAxiosPublic();
   const [searchValue, setSearchValue] = useState("");
   const [filter, setFilter] = useState([]);
+  const [filterSize, setFilterSize] = useState([]);
   const {
     data: products = [],
     refetch,
     isPending,
   } = useQuery({
-    queryKey: ["all-products", searchValue, filter],
+    queryKey: ["all-products", searchValue, filter, filterSize],
     queryFn: async () => {
       const { data } = await axiosPublic(
-        `/all-products?search=${searchValue}&filter=${filter}`
+        `/all-products?search=${searchValue}&filter=${filter}&filterSize=${filterSize}`
       );
       return data;
     },
@@ -34,12 +34,26 @@ const AllProducts = () => {
     });
   };
 
+  const handleSizeFilter = (e) => {
+    setFilterSize((prev) => {
+      if (prev.includes(e.target.value)) {
+        return prev.filter((item) => item !== e.target.value);
+      } else {
+        return [...prev, e.target.value];
+      }
+    });
+  };
+  console.log(filterSize);
+
   return (
     <div className="pt-32 lg:px-12 md:px-8 px-4">
-      <div className="grid grid-cols-12  gap-x-3">
+      <div className="grid md:grid-cols-12  gap-x-3">
         {/* Side Filter */}
-        <div className="col-span-3">
-          <SideBarFilter handleFilter={handleFilter} />
+        <div className="col-span-3 hidden md:block">
+          <SideBarFilter
+            handleFilter={handleFilter}
+            handleSizeFilter={handleSizeFilter}
+          />
         </div>
         <div className="col-span-9 ">
           <div className="flex items-center md:justify-between justify-center ">

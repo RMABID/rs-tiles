@@ -2,6 +2,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useParams } from "react-router-dom";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import LoadingSpinner from "../../components/share/LoadingSpinner";
+import RelatedProducts from "../../components/AllProducts/RelatedProducts";
 
 const ProductDetails = () => {
   const axiosPublic = useAxiosPublic();
@@ -16,17 +17,17 @@ const ProductDetails = () => {
 
   const { product_image, category, type, size, quantity, total_box } = product;
 
- if(isLoading)return <LoadingSpinner/>
+  if (isLoading) return <LoadingSpinner />;
 
   return (
     <>
-      <div className="pt-20 flex py-14 flex-col justify-center items-center">
-        <div className="lg:flex-row flex flex-col mt-24 justify-center gap-18 items-center">
-          <div className="flex-1 w-[622px]  h-[525px]  mx-auto">
+      <div className="pt-20 flex px-4 py-14 flex-col justify-center items-center">
+        <div className="lg:flex-row  flex flex-col mt-24 justify-center gap-18 items-center">
+          <div className="flex-1">
             <img className="w-full" src={product_image} alt={product_image} />
           </div>
 
-          <div className="flex-1 w-[622px] h-[525px] mx-auto bg-white p-6 rounded-lg  ">
+          <div className="flex-1 md:w-[622px] h-[525px] mx-auto bg-white p-6 rounded-lg  ">
             <h2 className="text-center text-3xl font-semibold text-gray-800 mb-4">
               2398 GL YBR
             </h2>
@@ -76,8 +77,10 @@ const ProductDetails = () => {
         </div>
       </div>
       <div className="my-14 px-12">
-        <h2 className="text-4xl text-left">Releted Products</h2>
-        <p className="border-2 my-4"></p>
+      
+        <div>
+          <RelatedProducts category={category} />
+        </div>
       </div>
     </>
   );
