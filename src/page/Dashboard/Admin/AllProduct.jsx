@@ -11,7 +11,7 @@ const AllProduct = () => {
       return data;
     },
   });
-  console.log(products);
+
   return (
     <div>
       <div className="overflow-x-auto">
@@ -25,6 +25,7 @@ const AllProduct = () => {
               <th>Size</th>
               <th>Box</th>
               <th>Quantity (FT)</th>
+              <th>Latest Add</th>
               <th>Action</th>
             </tr>
           </thead>
