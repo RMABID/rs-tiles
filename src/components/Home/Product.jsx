@@ -45,8 +45,11 @@ const Product = () => {
             </motion.div>
           </Link>
         </Fade>
-        <Fade direction="right">
-          <Link className="md:col-span-2 lg:col-span-1 md:flex lg:flex-none justify-center">
+        <Fade
+          direction="right"
+          className="md:col-span-2 lg:col-span-1 md:flex lg:flex-none justify-center"
+        >
+          <Link>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}

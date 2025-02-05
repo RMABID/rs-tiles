@@ -8,6 +8,7 @@ import SideNavbar from "../../components/Home/SideNavbar";
 import { useState } from "react";
 import SmallNavbar from "../../components/share/SmallNavbar";
 import AiAnswer from "../../components/Home/AiAnswer";
+import LatestProducts from "../../components/Home/LatestProducts";
 
 const Home = () => {
   const [isActive, setActive] = useState(true);
@@ -25,8 +26,9 @@ const Home = () => {
         <Banner />
         <About />
         <Product />
+        <LatestProducts />
         <Testimonial />
-        <AiAnswer />
+        {/* <AiAnswer /> */}
       </section>
       <Footer />
     </div>
