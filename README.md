@@ -1,8 +1,10 @@
-# RS Tails & Sanitary
+# RS Tiles & Sanitary
+
+![Banner](Screenshot%202025-01-29%20202615.png)
 
 ## Introduction
 
-RS Tails & Sanitary is a company specializing in the sale of tiles and sanitary products. Our website showcases a variety of products to meet diverse customer needs.
+RS Tiles & Sanitary is a company specializing in high-quality tiles and sanitary products. Our mission is to provide premium collections that enhance luxurious living.
 
 ## Table of Contents
 
@@ -20,14 +22,17 @@ RS Tails & Sanitary is a company specializing in the sale of tiles and sanitary 
 
 ## Features
 
-- **Product Showcase**: Displays a range of tiles and sanitary products.
-- **Contact Information**: Provides ways for customers to get in touch.
+- **Product Showcase**: Explore a wide range of tiles and sanitary products.
+- **User Dashboard**: Access personalized recommendations and services.
+- **Responsive Design**: Optimized for all devices.
+- **Contact & Support**: Easy communication with the team.
 
 ## Installation
 
-As the website is deployed on Netlify, there is no installation required for users. To set up the project locally for development purposes:
+For local development:
 
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/RMABID/rs-tiles
    cd rstiles
+   ```
