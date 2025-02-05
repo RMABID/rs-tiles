@@ -7,6 +7,7 @@ import Testimonial from "../../components/Home/Testimonial";
 import SideNavbar from "../../components/Home/SideNavbar";
 import { useState } from "react";
 import SmallNavbar from "../../components/share/SmallNavbar";
+import AiAnswer from "../../components/Home/AiAnswer";
 
 const Home = () => {
   const [isActive, setActive] = useState(true);
@@ -25,6 +26,7 @@ const Home = () => {
         <About />
         <Product />
         <Testimonial />
+        <AiAnswer />
       </section>
       <Footer />
     </div>
