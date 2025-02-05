@@ -1,6 +1,6 @@
 # RS Tiles & Sanitary
 
-![Banner](./src/assets/image/readme-banner.png)
+![Banner](https://raw.githubusercontent.com/RMABID/rs-tiles/main/assets/readme-banner.png)
 
 ## Introduction
 
@@ -35,3 +35,4 @@ For local development:
    ```bash
    git clone https://github.com/RMABID/rs-tiles
    cd rs-tiles
+   ```
