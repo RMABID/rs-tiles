@@ -1,6 +1,6 @@
 # RS Tiles & Sanitary
 
-![Banner](Screenshot%202025-01-29%20202615.png)
+![Banner](./src/assets/image/readme-banner.png)
 
 ## Introduction
 
@@ -34,5 +34,4 @@ For local development:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/RMABID/rs-tiles
-   cd rstiles
-   ```
+   cd rs-tiles
