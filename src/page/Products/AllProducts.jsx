@@ -87,7 +87,7 @@ const AllProducts = () => {
 
           {products.length !== 0 ? (
             <div className="grid lg:grid-cols-3 my-12 md:grid-cols-2 items-center gap-8 lg:gap-12">
-              {products.map((item, index) => (
+              {products?.map((item, index) => (
                 <ProductCard item={item} key={index} />
               ))}
             </div>

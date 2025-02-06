@@ -56,8 +56,8 @@ const LatestCard = () => {
         className="mySwiper"
       >
         {products
-          .filter((product) => product.latest === true)
-          .map((item, index) => (
+          ?.filter((product) => product.latest === true)
+          ?.map((item, index) => (
             <SwiperSlide key={index} className="w-full">
               <div className="group  shadow w-96 h-[30rem] rounded-xl hover:scale-105  duration-500 transition-all border border-white overflow-hidden cursor-pointer bg-white flex flex-col">
                 <img
