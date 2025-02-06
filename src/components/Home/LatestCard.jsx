@@ -22,12 +22,13 @@ const LatestCard = () => {
   });
 
   return (
-    <div className="my-24">
+    <div className="my-14">
       <Swiper
         slidesPerView={2}
         spaceBetween={20}
         autoplay={{
-          delay: 2500,
+          delay: 3000,
+
           disableOnInteraction: false,
         }}
         pagination={{
@@ -57,18 +58,17 @@ const LatestCard = () => {
         {products
           .filter((product) => product.latest === true)
           .map((item, index) => (
-            <SwiperSlide
-              key={index}
-              to={`/all-products/${item?._id}`}
-              className="w-full"
-            >
-              <div className="group  shadow w-96 h-[30rem] rounded-xl hover:scale-105  duration-500 transition-all border border-white overflow-hidden bg-white flex flex-col">
+            <SwiperSlide key={index} className="w-full">
+              <div className="group  shadow w-96 h-[30rem] rounded-xl hover:scale-105  duration-500 transition-all border border-white overflow-hidden cursor-pointer bg-white flex flex-col">
                 <img
                   className="rounded-t-lg object-cover"
                   src={item?.product_image}
                   alt={item?.product_name}
                 />
-                <div className="bg-white  relative flex flex-col group-hover:-translate-y-11 w-full transition-all duration-500  rounded-b-lg py-4 flex-grow  items-center justify-center">
+                <Link
+                  to={`/all-products/${item?._id}`}
+                  className="bg-white  relative flex flex-col group-hover:-translate-y-11 w-full transition-all duration-500  rounded-b-lg py-4 flex-grow  items-center justify-center"
+                >
                   <h3 className="text-3xl text-[#1D86BD] text-center font-medium py-4">
                     {item?.product_name}
                   </h3>
@@ -80,7 +80,7 @@ const LatestCard = () => {
                       <CiTwitter />
                     </span>
                   </div>
-                </div>
+                </Link>
               </div>
             </SwiperSlide>
           ))}
