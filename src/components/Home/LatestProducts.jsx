@@ -1,6 +1,7 @@
 import React from "react";
 import Title from "../share/Title";
 import { Fade } from "react-awesome-reveal";
+import LatestCard from "./LatestCard";
 
 const LatestProducts = () => {
   return (
@@ -8,6 +9,7 @@ const LatestProducts = () => {
       <Fade direction="down">
         <Title text1={"Latest Products"} />
       </Fade>
+      <LatestCard />
     </section>
   );
 };
