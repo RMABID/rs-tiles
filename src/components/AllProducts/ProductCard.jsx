@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
+import LoadingSpinner from "../share/LoadingSpinner";
 
 const ProductCard = ({ item }) => {
   const { product_image, product_name, _id } = item;
+
   return (
     <Link to={`/all-products/${_id}`}>
       <div className="shadow  rounded-xl hover:scale-105 cursor-pointer duration-500 transition-all border border-white overflow-hidden bg-white flex flex-col">

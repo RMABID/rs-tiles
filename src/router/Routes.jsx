@@ -48,7 +48,7 @@ const Routes = createBrowserRouter([
     children: [
       {
         index: "add-product",
-        path: "add-product",
+        // path: "add-product",
         element: <AddProduct />,
       },
       {

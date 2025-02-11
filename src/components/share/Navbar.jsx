@@ -69,12 +69,6 @@ const Navbar = ({ handleToggle, isActive }) => {
                 className="dropdown-content cursor-pointer -ml-16 mt-6 menu bg-black text-white rounded-box z-1 w-52 mx-auto p-2 shadow-sm"
               >
                 <li>
-                  <Link>Company overview</Link>
-                </li>
-                <li>
-                  <Link>Mission, Vision & Values</Link>
-                </li>
-                <li>
                   <Link to={"/our-team"}>Our Team</Link>
                 </li>
               </ul>

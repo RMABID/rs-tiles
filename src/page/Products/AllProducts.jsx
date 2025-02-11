@@ -3,27 +3,13 @@ import ProductCard from "../../components/AllProducts/ProductCard";
 import SideBarFilter from "../../components/AllProducts/SideBarFilter";
 import useAxiosPublic from "../../hooks/useAxiosPublic";
 import { useState } from "react";
-import LoadingSpinner from "../../components/share/LoadingSpinner";
 
 const AllProducts = () => {
   const axiosPublic = useAxiosPublic();
   const [searchValue, setSearchValue] = useState("");
   const [filter, setFilter] = useState([]);
   const [filterSize, setFilterSize] = useState([]);
-  const {
-    data: products = [],
-    refetch,
-    isPending,
-  } = useQuery({
-    queryKey: ["all-products", searchValue, filter, filterSize],
-    queryFn: async () => {
-      const { data } = await axiosPublic(
-        `/all-products?search=${searchValue}&filter=${filter}&filterSize=${filterSize}`
-      );
-      return data;
-    },
-  });
-  // if (isPending) return <LoadingSpinner />;
+
   const handleFilter = (e) => {
     setFilter((prev) => {
       if (prev.includes(e.target.value)) {
@@ -43,7 +29,15 @@ const AllProducts = () => {
       }
     });
   };
-  console.log(filterSize);
+  const { data: products = [], isLoading } = useQuery({
+    queryKey: ["all-products", searchValue, filter, filterSize],
+    queryFn: async () => {
+      const { data } = await axiosPublic(
+        `/all-products?search=${searchValue}&filter=${filter}&filterSize=${filterSize}`
+      );
+      return data;
+    },
+  });
 
   return (
     <div className="pt-32 lg:px-12 md:px-8 px-4">

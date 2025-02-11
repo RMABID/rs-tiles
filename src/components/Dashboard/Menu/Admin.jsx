@@ -6,7 +6,7 @@ import { FaStackOverflow } from "react-icons/fa";
 const Admin = () => {
   return (
     <>
-      <MenuItem icon={MdNoteAdd} text="Add Product" address="add-product" />
+      <MenuItem icon={MdNoteAdd} text="Add Product" address="/dashboard" />
       <MenuItem icon={LuBrickWall} text="All Products" address="all-product" />
       <MenuItem icon={FaStackOverflow} text="Rs Loan" address="rs-loan" />
     </>
