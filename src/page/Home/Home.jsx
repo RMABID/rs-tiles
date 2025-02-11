@@ -28,7 +28,7 @@ const Home = () => {
         <Product />
         <LatestProducts />
         <Testimonial />
-        {/* <AiAnswer /> */}
+       
       </section>
       <Footer />
     </div>

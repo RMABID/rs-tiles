@@ -5,8 +5,12 @@ import sanitary from "../../assets/image/banner.jpg";
 import { Link } from "react-router-dom";
 import { Fade } from "react-awesome-reveal";
 import { motion } from "motion/react";
+import { useState } from "react";
 
 const Product = () => {
+  const [category, setCategory] = useState("");
+  console.log(category);
+  const handleCategory = async (data) => {};
   return (
     <section className="my-14 w-10/12 lg:w-8/12 mx-auto ">
       <Fade direction="down">
@@ -14,7 +18,7 @@ const Product = () => {
       </Fade>
       <div className="grid my-12 lg:grid-cols-3 md:grid-cols-2 justify-center items-center md:gap-14 gap-4">
         <Fade direction="left">
-          <Link>
+          <Link to={"/all-products"}>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -22,7 +26,10 @@ const Product = () => {
               className="md:w-[405px] w-[465px]  hover:translate-y-[-5px] duration-700 ease-in-out relative h-[323px] bg-center bg-cover bg-no-repeat"
             >
               <div className="inset-0 bg-[#05110456]  flex flex-col items-center justify-center absolute">
-                <button className="btn w-48 text-xl bg-[#F0EFEF]">
+                <button
+                  onClick={() => setCategory("wall")}
+                  className="btn w-48 text-xl bg-[#F0EFEF]"
+                >
                   Wall Tails
                 </button>
               </div>
@@ -30,7 +37,7 @@ const Product = () => {
           </Link>
         </Fade>
         <Fade direction="up">
-          <Link>
+          <Link to={"/all-products"}>
             <motion.div
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.95 }}
@@ -38,7 +45,10 @@ const Product = () => {
               className="md:w-[405px] w-[465px]  hover:translate-y-[-5px] duration-700 ease-in-out relative h-[323px] bg-center bg-cover bg-no-repeat"
             >
               <div className="inset-0 bg-[#05110456]  flex flex-col items-center justify-center absolute">
-                <button className="btn w-48 text-xl bg-[#F0EFEF]">
+                <button
+                  onClick={() => setCategory("Floor")}
+                  className="btn w-48 text-xl bg-[#F0EFEF]"
+                >
                   Floor Tails
                 </button>
               </div>
